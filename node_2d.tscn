@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://pf3wp8thwq0n"]
+
+[ext_resource type="Script" uid="uid://dus8wm6maflu6" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://cf27fy6t8umuc" path="res://FONDOMENU.jpg" id="2_0hol4"]
+[ext_resource type="FontFile" uid="uid://dfu04kpooxhfd" path="res://PressStart2P-Regular.ttf" id="3_q6r6c"]
+
+[node name="Global" type="Node2D" unique_id=1751666248]
+script = ExtResource("1_epypp")
+
+[node name="Control" type="Control" parent="." unique_id=188027958]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1915.0
+offset_bottom = 1078.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2032919722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.5
+offset_top = -1.0
+offset_right = -766.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0hol4")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=772621132]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -953.5
+offset_top = -228.0
+offset_right = 205.5
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=880558143]
+modulate = Color(0.84705883, 0.023529412, 0.7294118, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q6r6c")
+theme_override_font_sizes/font_size = 42
+text = "CUATRO EN RAYA BOOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=562914683]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99607843, 0.99215686, 0.92156863, 1)
+theme_override_colors/font_focus_color = Color(0.9537088, 1, 0.30209297, 1)
+theme_override_colors/font_hover_color = Color(0.13725491, 0.9607843, 0.9843137, 1)
+theme_override_fonts/font = ExtResource("3_q6r6c")
+text = "JUGAR"
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]

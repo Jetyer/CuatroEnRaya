@@ -1,0 +1,660 @@
+[gd_scene format=3 uid="uid://dapvg45qbe74q"]
+
+[ext_resource type="Script" uid="uid://bngxhmfpheqq6" path="res://juego.gd" id="1_g3dr0"]
+[ext_resource type="Texture2D" uid="uid://d3qkivppt1ick" path="res://PANELFONDO22.jpg" id="2_icdfu"]
+[ext_resource type="FontFile" uid="uid://dfu04kpooxhfd" path="res://PressStart2P-Regular.ttf" id="3_n74ki"]
+[ext_resource type="Texture2D" uid="uid://b4ev28jsxw8n0" path="res://PANELGANADOR.jpg" id="4_l4niy"]
+[ext_resource type="Texture2D" uid="uid://dbimgtmtpjd4g" path="res://jugador2.png" id="5_6v0qg"]
+[ext_resource type="Texture2D" uid="uid://bfi2so4nmsfpb" path="res://PANELREGLAS.jpg" id="5_xbmtn"]
+[ext_resource type="Texture2D" uid="uid://bvvpj7ve6xc6g" path="res://ElMariana caminando-original.png" id="7_ybvdj"]
+[ext_resource type="Texture2D" uid="uid://dn8xeithp3oo3" path="res://Ari caminando-original-1.png" id="8_8gqk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n74ki"]
+bg_color = Color(0.11764706, 0, 0.13333334, 0.20392157)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvuhb"]
+bg_color = Color(0.11764706, 0, 0.13333334, 0.11764706)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98939866, 0.98939866, 0.98939854, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n74ki"]
+texture = ExtResource("4_l4niy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6v0qg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipdbw"]
+bg_color = Color(0.12156863, 0, 0.13333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbmtn"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=1626097674]
+position = Vector2(302, 82)
+script = ExtResource("1_g3dr0")
+
+[node name="Control" type="Control" parent="." unique_id=579221066]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1499613133]
+layout_mode = 0
+offset_left = -296.0
+offset_top = -76.0
+offset_right = 846.0
+offset_bottom = 563.0
+texture = ExtResource("2_icdfu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control" unique_id=972193334]
+layout_mode = 0
+offset_left = -248.0
+offset_top = 302.0
+offset_right = -104.0
+offset_bottom = 325.0
+theme_override_fonts/font = ExtResource("3_n74ki")
+text = "JUGADOR 1"
+
+[node name="Label2" type="Label" parent="Control" unique_id=1264288365]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 304.0
+offset_right = 803.0
+offset_bottom = 327.0
+theme_override_fonts/font = ExtResource("3_n74ki")
+text = "JUGADOR 2"
+
+[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=1087992349]
+layout_mode = 0
+offset_left = -285.0
+offset_top = 319.0
+offset_right = -87.0
+offset_bottom = 537.0
+texture = ExtResource("8_8gqk3")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=2052085327]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 5.315
+offset_left = 619.0
+offset_top = 311.0
+offset_right = 840.0
+offset_bottom = 324.4
+texture = ExtResource("7_ybvdj")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="Control" unique_id=1002947344]
+layout_mode = 0
+offset_right = 584.0
+offset_bottom = 500.0
+columns = 7
+
+[node name="Button" type="Button" parent="Control/GridContainer" unique_id=1398515118]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button2" type="Button" parent="Control/GridContainer" unique_id=1185429739]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button8" type="Button" parent="Control/GridContainer" unique_id=425762867]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button9" type="Button" parent="Control/GridContainer" unique_id=1159829417]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button10" type="Button" parent="Control/GridContainer" unique_id=174102738]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button11" type="Button" parent="Control/GridContainer" unique_id=1973535369]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button12" type="Button" parent="Control/GridContainer" unique_id=926736883]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button13" type="Button" parent="Control/GridContainer" unique_id=992432082]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button14" type="Button" parent="Control/GridContainer" unique_id=858152441]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button15" type="Button" parent="Control/GridContainer" unique_id=1683125743]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button16" type="Button" parent="Control/GridContainer" unique_id=1823409845]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button17" type="Button" parent="Control/GridContainer" unique_id=1685352153]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button18" type="Button" parent="Control/GridContainer" unique_id=1316593594]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button19" type="Button" parent="Control/GridContainer" unique_id=978008206]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button20" type="Button" parent="Control/GridContainer" unique_id=1259868162]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button21" type="Button" parent="Control/GridContainer" unique_id=1930059919]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button22" type="Button" parent="Control/GridContainer" unique_id=730159520]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button23" type="Button" parent="Control/GridContainer" unique_id=1146921733]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button24" type="Button" parent="Control/GridContainer" unique_id=1608803321]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button25" type="Button" parent="Control/GridContainer" unique_id=732313342]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button26" type="Button" parent="Control/GridContainer" unique_id=726098527]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button27" type="Button" parent="Control/GridContainer" unique_id=724230232]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button28" type="Button" parent="Control/GridContainer" unique_id=1175933037]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button29" type="Button" parent="Control/GridContainer" unique_id=622980906]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button30" type="Button" parent="Control/GridContainer" unique_id=1612808451]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button31" type="Button" parent="Control/GridContainer" unique_id=1101107163]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button32" type="Button" parent="Control/GridContainer" unique_id=1216786843]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button33" type="Button" parent="Control/GridContainer" unique_id=110132314]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button34" type="Button" parent="Control/GridContainer" unique_id=1004084641]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button35" type="Button" parent="Control/GridContainer" unique_id=502311274]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button36" type="Button" parent="Control/GridContainer" unique_id=271957761]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button37" type="Button" parent="Control/GridContainer" unique_id=2070364325]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button38" type="Button" parent="Control/GridContainer" unique_id=174241025]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button39" type="Button" parent="Control/GridContainer" unique_id=49359120]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button40" type="Button" parent="Control/GridContainer" unique_id=1526420650]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button41" type="Button" parent="Control/GridContainer" unique_id=1757915001]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button42" type="Button" parent="Control/GridContainer" unique_id=864470444]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button3" type="Button" parent="Control/GridContainer" unique_id=1209777104]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button4" type="Button" parent="Control/GridContainer" unique_id=252260630]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button5" type="Button" parent="Control/GridContainer" unique_id=978309085]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button6" type="Button" parent="Control/GridContainer" unique_id=982850996]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="Button7" type="Button" parent="Control/GridContainer" unique_id=1970120167]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n74ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gvuhb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gvuhb")
+
+[node name="PanelGanador" type="Panel" parent="Control" unique_id=244268084]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -93.0
+offset_right = 823.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n74ki")
+
+[node name="BotonReiniciar" type="Button" parent="Control/PanelGanador" unique_id=1741543164]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 198.0
+offset_right = 679.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_n74ki")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_6v0qg")
+text = "Jugar otra vez"
+
+[node name="LabelGanador" type="Label" parent="Control/PanelGanador" unique_id=1413582343]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 52.0
+offset_right = 899.0
+offset_bottom = 200.0
+theme_override_fonts/font = ExtResource("3_n74ki")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonHome" type="Button" parent="Control/PanelGanador" unique_id=487316249]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 232.0
+offset_right = 615.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("3_n74ki")
+theme_override_font_sizes/font_size = 14
+text = "Inicio"
+
+[node name="PanelPregunta" type="Panel" parent="Control" unique_id=481166148]
+visible = false
+layout_direction = 4
+layout_mode = 0
+offset_left = -67.0
+offset_top = 83.0
+offset_right = 658.0
+offset_bottom = 425.0
+accessibility_name = "PanelPregunta"
+theme_override_styles/panel = SubResource("StyleBoxFlat_ipdbw")
+
+[node name="TextoPregunta" type="Label" parent="Control/PanelPregunta" unique_id=1849787533]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 87.0
+offset_right = 645.0
+offset_bottom = 121.0
+accessibility_name = "TextoPregunta"
+theme_override_fonts/font = ExtResource("3_n74ki")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="InputRespuesta" type="LineEdit" parent="Control/PanelPregunta" unique_id=2008503112]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.18100001
+anchor_right = 0.5
+anchor_bottom = 0.18100001
+offset_left = -97.5
+offset_top = 106.09799
+offset_right = 102.5
+offset_bottom = 146.09799
+accessibility_name = "InputRespuesta"
+theme_override_fonts/font = ExtResource("3_n74ki")
+
+[node name="BotonEnviar" type="Button" parent="Control/PanelPregunta" unique_id=1002591073]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.266
+anchor_bottom = 0.279
+offset_left = 274.0
+offset_top = 228.0
+offset_right = 259.15
+offset_bottom = 178.80502
+accessibility_name = "BotonEnviar"
+theme_override_fonts/font = ExtResource("3_n74ki")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_xbmtn")
+text = "Responder"
+
+[node name="Personaje2" type="TextureRect" parent="Control" unique_id=461171738]
+visible = false
+layout_mode = 0
+offset_left = 567.0
+offset_top = 206.0
+offset_right = 931.0
+offset_bottom = 570.0
+texture = ExtResource("5_6v0qg")
+
+[node name="PanelReglas" type="Panel" parent="Control" unique_id=571923605]
+visible = false
+self_modulate = Color(1, 0.15294118, 1, 1)
+layout_mode = 0
+offset_left = -294.0
+offset_top = -73.0
+offset_right = 845.0
+offset_bottom = 562.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/PanelReglas" unique_id=1699022271]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1138.0
+offset_bottom = 636.0
+texture = ExtResource("5_xbmtn")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Control/PanelReglas" unique_id=1515435214]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 579.0
+offset_right = 878.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.8745098, 1, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.89411765, 0.2627451, 0.9490196, 1)
+theme_override_colors/font_pressed_color = Color(0.9764706, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.9490196, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.972549, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 1, 0.8745098, 0.5019608)
+theme_override_colors/font_outline_color = Color(0.9372549, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n74ki")
+text = "ENTENDIDO"
+
+[connection signal="pressed" from="Control/PanelGanador/BotonReiniciar" to="." method="_on_boton_reiniciar_pressed"]
+[connection signal="pressed" from="Control/PanelGanador/BotonHome" to="." method="_on_boton_home_pressed"]
+[connection signal="pressed" from="Control/PanelReglas/Button" to="." method="_on_button_pressed"]
